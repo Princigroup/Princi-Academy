@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Princi Academy - Campus Virtual</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header.main-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header.main-header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        header.main-header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header.main-header nav ul li {
+            margin: 0 1rem;
+        }
+
+        header.main-header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header.main-header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 1rem 2rem;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        .aulas .aula {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .aulas .aula h3 {
+            margin-top: 0;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer.main-footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1>Princi Academy</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="acceso-aulas.html">Aulas Virtuales</a></li>
+                <li><a href="#foro">Foro</a></li>
+                <li><a href="#biblioteca">Biblioteca</a></li>
+                <li><a href="#perfil">Mi Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="aulas" class="aulas">
+        <h2>Aulas Virtuales</h2>
+        <div class="aula" id="aula-liderazgo">
+            <h3>Liderazgo Ético en Tiempos de Crisis</h3>
+            <p>Explora cómo liderar con integridad y ética durante situaciones desafiantes.</p>
+            <button onclick="location.href='aula_liderazgo.html'">Entrar</button>
+        </div>
+        <div class="aula" id="aula-comunicacion">
+            <h3>Comunicación Efectiva y Valores Cristianos</h3>
+            <p>Mejora tus habilidades de comunicación basadas en principios cristianos.</p>
+            <button onclick="location.href='aula_comunicacion.html'">Entrar</button>
+        </div>
+        <div class="aula" id="aula-mentoring">
+            <h3>Introducción al Mentoring</h3>
+            <p>Aprende los fundamentos para guiar y apoyar el desarrollo de otros.</p>
+            <button onclick="location.href='aula_mentoring.html'">Entrar</button>
+        </div>
+        <div class="aula" id="aula-innovacion">
+            <h3>Innovación Empresarial con Propósito</h3>
+            <p>Descubre cómo implementar innovaciones con impacto positivo en los negocios.</p>
+            <button onclick="location.href='aula_innovacion.html'">Entrar</button>
+        </div>
+        <div class="aula" id="aula-talleres">
+            <h3>Talleres Cortos y Cursos Intensivos</h3>
+            <p>Participa en sesiones prácticas y programas intensivos para desarrollar habilidades clave.</p>
+            <button onclick="location.href='aula_talleres.html'">Entrar</button>
+        </div>
+        <div class="aula" id="aula-finanzas">
+            <h3>Diploma en Finanzas y Emprendimiento</h3>
+            <p>Domina los fundamentos financieros y aprende a emprender con éxito.</p>
+            <button onclick="location.href='aula_finanzas.html'">Entrar</button>
+        </div>
+        <div class="aula" id="aula-master-liderazgo">
+            <h3>Master en Liderazgo Empresarial</h3>
+            <p>Desarrolla habilidades avanzadas para liderar organizaciones hacia el éxito.</p>
+            <button onclick="location.href='aula_master_liderazgo.html'">Entrar</button>
+        </div>
+        <div class="aula" id="aula-seminarios">
+            <h3>Seminarios y Empresas</h3>
+            <p>Participa en seminarios exclusivos y colabora con empresas líderes del sector.</p>
+            <button onclick="location.href='aula_seminarios.html'">Entrar</button>
+        </div>
+    </section>

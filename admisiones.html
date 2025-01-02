@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admisiones - Princi Academy</title>
+    <style>
+        .logohead {
+            height: 120px;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            }
+
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #005599, #003366);
+    color: white;
+    padding: 15px 20px;
+    text-shadow: 
+        -1px -1px 0 black,  /* Top-left */
+        1px -1px 0 black,   /* Top-right */
+        -1px 1px 0 black,   /* Bottom-left */
+        1px 1px 0 black;    /* Bottom-right */
+}
+        header img {
+            height: 50px;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-shadow: 
+        -1px -1px 0 black,  /* Top-left */
+        1px -1px 0 black,   /* Top-right */
+        -1px 1px 0 black,   /* Bottom-left */
+        1px 1px 0 black;    /* Bottom-right */
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .language-switcher {
+        margin-left: auto;
+        display: flex;
+        gap: 10px;
+    }
+
+    /* Estilo uniforme para los botones de idioma */
+    .language-switcher button {
+        background: none;
+        color: white;
+        border: 1px solid white;
+        padding: 8px 12px;  /* Ajustado el padding para más uniformidad */
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold; /* Hacer que el texto sea más prominente */
+        transition: background 0.3s ease, color 0.3s ease; /* Agregar una transición suave */
+    }
+
+    .language-switcher button:hover {
+        background: white;
+        color: #003366;  /* Fondo blanco con texto oscuro cuando se pasa el mouse */
+    }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            text-shadow: 
+        -1px -1px 0 black,  /* Top-left */
+        1px -1px 0 black,   /* Top-right */
+        -1px 1px 0 black,   /* Bottom-left */
+        1px 1px 0 black;    /* Bottom-right */
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: #003366;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                z-index: 10;
+            }
+
+            .menu ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .menu ul li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            padding: 40px;
+            background: url('IMG/campus\ admisiones.webp') no-repeat center center/cover;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #005599;
+        }
+
+        .admission-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 280px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: white;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .step h3 {
+            color: #005599;
+            margin-bottom: 10px;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e8eef5;
+        }
+
+        .cta-section a {
+            text-decoration: none;
+            padding: 15px 30px;
+            background-color: #005599;
+            color: white;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-section a:hover {
+            background-color: #003366;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logohead" src="EVANGELICAL BUSINESS SCHOOL.svg" alt="Princi Academy Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html" id="nav-home">Inicio</a></li>
+                <li><a href="quienes-somos.html" id="nav-about">Quiénes somos</a></li>
+                <li><a href="courses.html" id="nav-courses">Programas académicos</a></li>
+                <li><a href="admisiones.html" id="nav-admissions">Admisiones</a></li>
+                <li><a href="vida-campus.html" id="nav-campus">Vida en el campus</a></li>
+                <li><a href="contact.html" id="nav-contact">Contacto</a></li>
+                <li><a href="campus/login.html" id="nav-virtual">Aula Virtual</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher">
+            <button onclick="switchLanguage('es')">Español</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+    </header>
+    
+
+    <section class="hero">
+        <h1>Proceso de Admisiones</h1>
+        <p>Forma parte de Princi Academy y comienza tu camino hacia el éxito empresarial.</p>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Cómo Aplicar</h2>
+        <div class="admission-steps">
+            <div class="step">
+                <h3>1. Elige tu Programa</h3>
+                <p>Explora nuestros programas académicos y selecciona el que mejor se adapte a tus objetivos profesionales.</p>
+            </div>
+            <div class="step">
+                <h3>2. Completa tu Solicitud</h3>
+                <p>Llena el formulario de inscripción con tus datos personales y académicos.</p>
+            </div>
+            <div class="step">
+                <h3>3. Envía la Documentación</h3>
+                <p>Proporciona los documentos necesarios, como identificación oficial y comprobantes académicos.</p>
+            </div>
+            <div class="step">
+                <h3>4. Entrevista</h3>
+                <p>Participa en una entrevista personal o en línea para conocer más sobre tus metas e intereses.</p>
+            </div>
+            <div class="step">
+                <h3>5. Confirmación</h3>
+                <p>Recibirás un correo con la confirmación de tu admisión y los siguientes pasos.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>¿Listo para empezar?</h2>
+        <a href="contact.html">Solicita tu plaza ahora</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Princi Academy - Evangelical Business School. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

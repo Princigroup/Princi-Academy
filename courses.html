@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas Académicos - Princi Academy</title>
+    <style>
+         .logohead {
+            height: 120px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #005599, #003366);
+            color: white;
+            padding: 15px 20px;
+            text-shadow: 
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 0 black;
+        }
+        header img {
+            height: 50px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .cta-buttons {
+            margin-left: 20px;
+        }
+        .cta-buttons a {
+            background-color: #ff9900;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .cta-buttons a:hover {
+            background-color: #cc7a00;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .course {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+        }
+        .course h3 {
+            color: #005599;
+        }
+        .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav a {
+                margin: 10px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logohead" src="EVANGELICAL BUSINESS SCHOOL.svg" alt="Princi Academy Logo">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="quienes-somos.html">Quiénes somos</a>
+            <a href="courses.html">Programas académicos</a>
+            <a href="admisiones.html">Admisiones</a>
+            <a href="vida-campus.html">Vida en el campus</a>
+            <a href="contact.html">Contacto</a>
+        </nav>
+        <div class="language-switcher" style="margin-left:auto;">
+            <button onclick="switchLanguage('es')">Español</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 id="programs-title-es">Programas Académicos</h1>
+        <h1 id="programs-title-en" style="display:none;">Academic Programs</h1>
+        <p id="programs-description-es">En Princi Academy, ofrecemos programas diseñados para transformar a los líderes del mañana con valores éticos y un enfoque profesional. Explora nuestros cursos:</p>
+        <p id="programs-description-en" style="display:none;">At Princi Academy, we offer programs designed to transform tomorrow's leaders with ethical values and a professional approach. Explore our courses:</p>
+    
+        <div class="course" style="text-align: left;">
+            <h3 id="course1-title-es">Master en Liderazgo Empresarial Cristiano</h3>
+            <h3 id="course1-title-en" style="display:none;">Master in Christian Business Leadership</h3>
+            <p><strong id="duration1-es">Duración:</strong><span id="duration1-en" style="display:none;">Duration:</span> 12 meses (a tiempo parcial)</p>
+            <p><strong id="format1-es">Formato:</strong><span id="format1-en" style="display:none;">Format:</span> Híbrido (online y presencial)</p>
+            <p><strong id="price1-es">Precio:</strong><span id="price1-en" style="display:none;">Price:</span> €7,500</p>
+            <p><strong id="content1-es">Contenido:</strong><span id="content1-en" style="display:none;">Content:</span> Fundamentos de liderazgo bíblico, gestión empresarial ética, finanzas sostenibles y estrategias de toma de decisiones.</p>
+            <a href="master-liderazgo.html" class="btn">Ver detalles</a>
+        </div>
+    
+        <div class="course" style="text-align: left;">
+            <h3 id="course2-title-es">Diploma en Finanzas y Emprendimiento Cristiano</h3>
+            <h3 id="course2-title-en" style="display:none;">Diploma in Christian Finance and Entrepreneurship</h3>
+            <p><strong id="duration2-es">Duración:</strong><span id="duration2-en" style="display:none;">Duration:</span> 6 meses (a tiempo parcial)</p>
+            <p><strong id="format2-es">Formato:</strong><span id="format2-en" style="display:none;">Format:</span> 100% online</p>
+            <p><strong id="price2-es">Precio:</strong><span id="price2-en" style="display:none;">Price:</span> €3,000</p>
+            <p><strong id="content2-es">Contenido:</strong><span id="content2-en" style="display:none;">Content:</span> Gestión de recursos, creación de startups y planificación financiera basada en valores cristianos.</p>
+            <a href="finanzas-emprendimiento.html" class="btn">Ver detalles</a>
+        </div>
+    
+        <div class="course" style="text-align: left;">
+            <h3 id="course3-title-es">Talleres cortos y cursos</h3>
+            <h3 id="course3-title-en" style="display:none;">Short Workshops and Courses</h3>
+            <p><strong id="duration3-es">Duración:</strong><span id="duration3-en" style="display:none;">Duration:</span> 4-12 semanas (a tiempo parcial)</p>
+            <p><strong id="format3-es">Formato:</strong><span id="format3-en" style="display:none;">Format:</span> online y presencial</p>
+            <ul>
+                <li id="workshop1-es">Liderazgo en tiempo de crisis (€500)</li>
+                <li id="workshop1-en" style="display:none;">Leadership in Times of Crisis (€500)</li>
+                <li id="workshop2-es">Comunicación efectiva y valores Cristianos (€400)</li>
+                <li id="workshop2-en" style="display:none;">Effective Communication and Christian Values (€400)</li>
+                <li id="workshop3-es">Introducción al Mentoring (€350)</li>
+                <li id="workshop3-en" style="display:none;">Introduction to Mentoring (€350)</li>
+                <li id="workshop4-es">Innovación empresarial con Propósito (€600)</li>
+                <li id="workshop4-en" style="display:none;">Purpose-Driven Business Innovation (€600)</li>
+            </ul>
+            <a href="talleres-cursos.html" class="btn">Ver detalles</a>
+        </div>
+    
+        <div class="course" style="text-align: left;">
+            <h3 id="course4-title-es">Seminarios especializados</h3>
+            <h3 id="course4-title-en" style="display:none;">Specialized Seminars</h3>
+            <p><strong id="duration4-es">Duración:</strong><span id="duration4-en" style="display:none;">Duration:</span> 3-15 días (a tiempo parcial)</p>
+            <p><strong id="format4-es">Formato:</strong><span id="format4-en" style="display:none;">Format:</span> online y presencial</p>
+            <ul>
+                <li id="seminar1-es">Estrategias de impacto social (€300)</li>
+                <li id="seminar1-en" style="display:none;">Social Impact Strategies (€300)</li>
+                <li id="seminar2-es">Análisis de casos de éxito empresarial, Rey Salomón (€450)</li>
+                <li id="seminar2-en" style="display:none;">Analysis of Business Success Cases, King Solomon (€450)</li>
+                <li id="seminar3-es">Networking y colaboración empresarial (€250)</li>
+                <li id="seminar3-en" style="display:none;">Networking and Business Collaboration (€250)</li>
+                <li id="seminar4-es">Vivir libre sin cadenas... La plomada divina en empresas (€600)</li>
+                <li id="seminar4-en" style="display:none;">Living Free Without Chains... Divine Plumb Line in Business (€600)</li>
+                <li id="seminar5-es">Planificación financiera según la biblia (€500)</li>
+                <li id="seminar5-en" style="display:none;">Biblical Financial Planning (€500)</li>
+            </ul>
+            <a href="seminarios-especializados.html" class="btn">Ver detalles</a>
+        </div>
+    
+        <div class="course" style="text-align: left;">
+            <h3 id="course5-title-es">Paquetes Corporativos</h3>
+            <h3 id="course5-title-en" style="display:none;">Corporate Packages</h3>
+            <ul>
+                <p><strong id="offered-es">Se ofrecen:</strong><span id="offered-en" style="display:none;">Offered:</span></p>
+                <li id="package1-es">Programas personalizados para empresas</li>
+                <li id="package1-en" style="display:none;">Customized programs for companies</li>
+                <p><strong id="duration5-es">Duración:</strong><span id="duration5-en" style="display:none;">Duration:</span></p>
+                <li id="package2-es">Se adaptará a las necesidades del cliente</li>
+                <li id="package2-en" style="display:none;">Tailored to the client's needs</li>
+                <p><strong id="price5-es">Precio promedio:</strong><span id="price5-en" style="display:none;">Average Price:</span></p>
+                <li id="package3-es">Desde €5,000 por programa</li>
+                <li id="package3-en" style="display:none;">From €5,000 per program</li>
+                <p><strong id="content5-es">Contenido:</strong><span id="content5-en" style="display:none;">Content:</span></p>
+                <li id="package4-es">Diseño de estrategias empresariales</li>
+                <li id="package4-en" style="display:none;">Business strategy design</li>
+                <li id="package5-es">Capacidad en liderazgo para equipos directivos</li>
+                <li id="package5-en" style="display:none;">Leadership development for executive teams</li>
+                <li id="package6-es">Gestión de conflictos y alineación de valores corporativos</li>
+                <li id="package6-en" style="display:none;">Conflict management and corporate values alignment</li>
+                <li id="package7-es">Escucha activa y asertividad</li>
+                <li id="package7-en" style="display:none;">Active listening and assertiveness</li>
+            </ul>
+            <a href="paquetes-corporativos.html" class="btn">Ver detalles</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Princi Academy - Evangelical Business School. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function switchLanguage(language) {
+            const elementsEs = document.querySelectorAll('[id$="-es"]');
+            const elementsEn = document.querySelectorAll('[id$="-en"]');
+
+            if (language === 'es') {
+                elementsEs.forEach(el => el.style.display = 'inline');
+                elementsEn.forEach(el => el.style.display = 'none');
+            } else {
+                elementsEs.forEach(el => el.style.display = 'none');
+                elementsEn.forEach(el => el.style.display = 'inline');
+            }
+        }
+    </script>
+</body>
+</html>

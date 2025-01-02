@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .profile-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+        }
+
+        .profile-header .info {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .profile-header .info h2 {
+            margin: 0;
+            color: #4CAF50;
+        }
+
+        .profile-header .info p {
+            margin: 5px 0;
+        }
+
+        .profile-details,
+        .contact-section,
+        .tutors-section,
+        .diplomas-section,
+        .grades-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .profile-details h3,
+        .contact-section h3,
+        .tutors-section h3,
+        .diplomas-section h3,
+        .grades-section h3 {
+            color: #333;
+        }
+
+        .profile-details ul,
+        .contact-section ul,
+        .tutors-section ul,
+        .diplomas-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .profile-details ul li,
+        .contact-section ul li,
+        .tutors-section ul li,
+        .diplomas-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .grades-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .grades-table th, .grades-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .grades-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .edit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .edit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Mi Perfil</h1>
+
+        <!-- Cabecera del perfil -->
+        <div class="profile-header">
+            <img src="https://via.placeholder.com/150" alt="Foto de perfil">
+            <div class="info">
+                <h2>Juan Pérez</h2>
+                <p>Email: juanperez@email.com</p>
+                <p>Fecha de registro: 01/01/2020</p>
+            </div>
+        </div>
+
+        <!-- Detalles del perfil -->
+        <div class="profile-details">
+            <h3>Detalles del perfil</h3>
+            <ul>
+                <li><strong>Nombre completo:</strong> Juan Pérez</li>
+                <li><strong>Correo electrónico:</strong> juanperez@email.com</li>
+                <li><strong>Teléfono:</strong> +34 600 123 456</li>
+                <li><strong>Dirección:</strong> Calle Ficticia 123, Madrid, España</li>
+                <li><strong>Fecha de nacimiento:</strong> 15/03/1985</li>
+            </ul>
+        </div>
+
+        <!-- Sección de Notas -->
+        <div class="grades-section">
+            <h3>Mis Notas</h3>
+            <table class="grades-table">
+                <thead>
+                    <tr>
+                        <th>Asignatura</th>
+                        <th>Nota</th>
+                        <th>Comentarios</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Matemáticas</td>
+                        <td>9.5</td>
+                        <td>Excelente desempeño en los exámenes finales.</td>
+                    </tr>
+                    <tr>
+                        <td>Lengua Española</td>
+                        <td>8.2</td>
+                        <td>Buena comprensión lectora y expresión escrita.</td>
+                    </tr>
+                    <tr>
+                        <td>Historia</td>
+                        <td>7.8</td>
+                        <td>Se mejoró en los últimos exámenes.</td>
+                    </tr>
+                    <tr>
+                        <td>Inglés</td>
+                        <td>8.9</td>
+                        <td>Buen manejo del vocabulario y comprensión oral.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Sección de contacto con la Secretaría -->
+        <div class="contact-section">
+            <h3>Contacto con Secretaría</h3>
+            <ul>
+                <li><strong>Nombre:</strong> Ana López</li>
+                <li><strong>Email:</strong> secretaria@ejemplo.com</li>
+                <li><strong>Teléfono:</strong> +34 600 654 321</li>
+                <li><strong>Horario de atención:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM</li>
+            </ul>
+        </div>
+
+        <!-- Sección de Tutores -->
+        <div class="tutors-section">
+            <h3>Tutores</h3>
+            <ul>
+                <li><strong>Nombre del tutor:</strong> María García</li>
+                <li><strong>Especialidad:</strong> Matemáticas</li>
+                <li><strong>Email:</strong> maria@ejemplo.com</li>
+                <li><strong>Teléfono:</strong> +34 600 987 654</li>
+            </ul>
+        </div>
+
+        <!-- Sección de Diplomas -->
+        <div class="diplomas-section">
+            <h3>Mis Diplomas</h3>
+            <ul>
+                <li><strong>Diploma en Desarrollo Web</strong> - Instituto de Tecnología, 2022</li>
+                <li><strong>Certificado en Marketing Digital</strong> - Universidad de Madrid, 2021</li>
+                <li><strong>Diploma en Programación Java</strong> - Escuela de Informática, 2020</li>
+            </ul>
+        </div>
+
+        <!-- Botón de editar -->
+        <a href="editar-perfil.html">
+            <button class="edit-button">Editar perfil</button>
+        </a>
+    </div>
+
+</body>
+</html>

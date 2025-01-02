@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida en el Campus - Princi Academy</title>
+    <style>
+        .logohead {
+            height: 120px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #005599, #003366);
+            color: white;
+            padding: 15px 20px;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            background: url('IMG/cenro.jpg') no-repeat center center/cover;
+            padding: 50px 20px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .language-switcher {
+        margin-left: auto;
+        display: flex;
+        gap: 10px;
+    }
+
+    /* Estilo uniforme para los botones de idioma */
+    .language-switcher button {
+        background: none;
+        color: white;
+        border: 1px solid white;
+        padding: 8px 12px;  /* Ajustado el padding para más uniformidad */
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold; /* Hacer que el texto sea más prominente */
+        transition: background 0.3s ease, color 0.3s ease; /* Agregar una transición suave */
+    }
+
+    .language-switcher button:hover {
+        background: white;
+        color: #003366;  /* Fondo blanco con texto oscuro cuando se pasa el mouse */
+    }
+
+        .campus-content {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .campus-box {
+            flex: 1;
+            max-width: 400px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 300px; /* Altura fija para mantener igualdad */
+        }
+
+        .campus-box img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .campus-box h3 {
+            margin: 15px 0 10px;
+            color: #005599;
+        }
+
+        .campus-box p {
+            margin: 10px 0 0;
+        }
+
+        .campus-box:hover {
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px; /* Separación entre los recuadros y el footer */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logohead" src="EVANGELICAL BUSINESS SCHOOL.svg" alt="Princi Academy Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html" id="nav-home">Inicio</a></li>
+                <li><a href="quienes-somos.html" id="nav-about">Quiénes somos</a></li>
+                <li><a href="courses.html" id="nav-courses">Programas académicos</a></li>
+                <li><a href="admisiones.html" id="nav-admissions">Admisiones</a></li>
+                <li><a href="vida-campus.html" id="nav-campus">Vida en el campus</a></li>
+                <li><a href="contact.html" id="nav-contact">Contacto</a></li>
+                <li><a href="campus/login.html" id="nav-virtual">Aula Virtual</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher">
+            <button onclick="switchLanguage('es')">Español</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+    </header>
+
+    <section class="hero" id="hero-content">
+        <h1>Explora la Vida en el Campus</h1>
+        <p>Conoce más sobre nuestra experiencia educativa, tanto en el campus virtual como en el futuro campus físico.</p>
+    </section>
+
+    <section class="section">
+        <h2 id="campus-title">Explora el Campus</h2>
+        <div class="campus-content">
+            <a href="campus/login.html" class="campus-box">
+                <img src="IMG/class.jpg" alt="Campus Virtual">
+                <h3 id="virtual-campus">Campus Virtual</h3>
+                <p id="virtual-campus-desc">Accede desde cualquier lugar a nuestra plataforma educativa interactiva.</p>
+            </a>
+
+            <div class="campus-box">
+                <img src="IMG/cenro.jpg" alt="Campus Presencial">
+                <h3 id="physical-campus">Campus Presencial</h3>
+                <p id="physical-campus-desc">Próximamente</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Princi Academy - Evangelical Business School. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Función para cambiar el idioma
+        function switchLanguage(language) {
+            if (language === 'es') {
+                document.documentElement.lang = 'es';
+
+                // Traducir menú
+                document.getElementById('nav-home').textContent = 'Inicio';
+                document.getElementById('nav-about').textContent = 'Quiénes somos';
+                document.getElementById('nav-courses').textContent = 'Programas académicos';
+                document.getElementById('nav-admissions').textContent = 'Admisiones';
+                document.getElementById('nav-campus').textContent = 'Vida en el campus';
+                document.getElementById('nav-contact').textContent = 'Contacto';
+                document.getElementById('nav-virtual').textContent = 'Aula Virtual';
+
+                // Traducir contenido
+                document.getElementById('hero-content').innerHTML = `
+                    <h1>Explora la Vida en el Campus</h1>
+                    <p>Conoce más sobre nuestra experiencia educativa, tanto en el campus virtual como en el futuro campus físico.</p>
+                `;
+                document.getElementById('campus-title').textContent = "Explora el Campus";
+                document.getElementById('virtual-campus').textContent = "Campus Virtual";
+                document.getElementById('virtual-campus-desc').textContent = "Accede desde cualquier lugar a nuestra plataforma educativa interactiva.";
+                document.getElementById('physical-campus').textContent = "Campus Presencial";
+                document.getElementById('physical-campus-desc').textContent = "Próximamente";
+
+                document.querySelector('footer p').textContent = "© 2024 Princi Academy - Evangelical Business School. Todos los derechos reservados.";
+            } else if (language === 'en') {
+                document.documentElement.lang = 'en';
+
+                // Traducir menú
+                document.getElementById('nav-home').textContent = 'Home';
+                document.getElementById('nav-about').textContent = 'About Us';
+                document.getElementById('nav-courses').textContent = 'Academic Programs';
+                document.getElementById('nav-admissions').textContent = 'Admissions';
+                document.getElementById('nav-campus').textContent = 'Campus Life';
+                document.getElementById('nav-contact').textContent = 'Contact';
+                document.getElementById('nav-virtual').textContent = 'Virtual Classroom';
+
+                // Traducir contenido
+                document.getElementById('hero-content').innerHTML = `
+                    <h1>Explore Campus Life</h1>
+                    <p>Learn more about our educational experience, both in the virtual campus and the future physical campus.</p>
+                `;
+                document.getElementById('campus-title').textContent = "Explore the Campus";
+                document.getElementById('virtual-campus').textContent = "Virtual Campus";
+                document.getElementById('virtual-campus-desc').textContent = "Access our interactive educational platform from anywhere.";
+                document.getElementById('physical-campus').textContent = "Physical Campus";
+                document.getElementById('physical-campus-desc').textContent = "Coming soon";
+
+                document.querySelector('footer p').textContent = "© 2024 Princi Academy - Evangelical Business School. All Rights Reserved.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container label {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="tel"],
+        .form-container input[type="date"],
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .form-container textarea {
+            resize: vertical;
+        }
+
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilos para la imagen de perfil */
+        .profile-image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image-container img {
+            max-width: 150px;
+            max-height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-image-container input[type="file"] {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Editar Perfil</h1>
+
+        <div class="form-container">
+            <form action="guardar-perfil.php" method="POST" enctype="multipart/form-data">
+                <!-- Campo para la imagen de perfil -->
+                <div class="profile-image-container">
+                    <img id="profileImage" src="default-profile.jpg" alt="Imagen de perfil">
+                    <input type="file" name="profile_image" id="profileImageInput" accept="image/*">
+                </div>
+
+                <!-- Campo para el nombre completo -->
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" value="Juan Pérez" required>
+
+                <!-- Campo para el correo electrónico -->
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" value="juanperez@email.com" required>
+
+                <!-- Campo para el teléfono -->
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" value="+34 600 123 456" required>
+
+                <!-- Campo para la dirección -->
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" name="direccion" value="Calle Ficticia 123, Madrid, España" required>
+
+                <!-- Campo para la fecha de nacimiento -->
+                <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" value="1985-03-15" required>
+
+                <!-- Campo para comentarios o notas adicionales -->
+                <label for="comentarios">Comentarios o Notas</label>
+                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Opcional: agregar algún comentario sobre tu perfil o preferencias..."></textarea>
+
+                <!-- Botón para guardar los cambios -->
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mostrar la imagen seleccionada en el input
+        document.getElementById('profileImageInput').addEventListener('change', function(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const imgElement = document.getElementById('profileImage');
+                imgElement.src = reader.result; // Asigna la imagen cargada al src del elemento <img>
+            }
+            reader.readAsDataURL(event.target.files[0]); // Lee la imagen seleccionada
+        });
+    </script>
+
+</body>
+</html>

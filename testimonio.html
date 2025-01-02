@@ -1,0 +1,90 @@
+<style>
+    /* Estilos del header y otros elementos previos */
+    .logohead {
+        height: 120px;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(90deg, #005599, #003366);
+        color: white;
+        padding: 15px 20px;
+    }
+
+    header img {
+        height: 50px;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Esto alinea los elementos horizontalmente */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .language-switcher {
+        margin-left: auto;
+        display: flex;
+        gap: 10px;
+    }
+
+    /* Estilo uniforme para los botones de idioma */
+    .language-switcher button {
+        background: none;
+        color: white;
+        border: 1px solid white;
+        padding: 8px 12px;  /* Ajustado el padding para más uniformidad */
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold; /* Hacer que el texto sea más prominente */
+        transition: background 0.3s ease, color 0.3s ease; /* Agregar una transición suave */
+    }
+
+    .language-switcher button:hover {
+        background: white;
+        color: #003366;  /* Fondo blanco con texto oscuro cuando se pasa el mouse */
+    }
+</style>
+<header>
+    <img class="logohead" src="EVANGELICAL BUSINESS SCHOOL.svg" alt="Princi Academy Logo">
+    <nav>
+        <ul>
+            <li><a href="index.html" id="nav-home">Inicio</a></li>
+            <li><a href="quienes-somos.html" id="nav-about">Quiénes somos</a></li>
+            <li><a href="courses.html" id="nav-courses">Programas académicos</a></li>
+            <li><a href="admisiones.html" id="nav-admissions">Admisiones</a></li>
+            <li><a href="vida-campus.html" id="nav-campus">Vida en el campus</a></li>
+            <li><a href="contact.html" id="nav-contact">Contacto</a></li>
+            <li><a href="campus/login.html" id="nav-virtual">Aula Virtual</a></li>
+        </ul>
+    </nav>
+    <div class="language-switcher">
+        <button onclick="switchLanguage('es')">Español</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </div>
+</header>

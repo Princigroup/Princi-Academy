@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro del Campus</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .forum-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .forum-container h2 {
+            color: #333;
+        }
+
+        .forum-thread {
+            margin-bottom: 30px;
+        }
+
+        .forum-thread h3 {
+            font-size: 20px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .forum-thread p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .forum-thread .replies {
+            margin-top: 10px;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+
+        .forum-section {
+            margin-top: 50px;
+        }
+
+        .forum-section h3 {
+            color: #333;
+        }
+
+        .forum-link {
+            font-size: 18px;
+            color: #2196F3;
+            text-decoration: none;
+        }
+
+        .forum-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Foro del Campus</h1>
+        <p>Bienvenido al foro general del campus. Aquí podrás encontrar temas generales relacionados con la vida estudiantil, eventos, noticias y más.</p>
+
+        <!-- Foros Generales -->
+        <div class="forum-container">
+            <h2>Foros Generales</h2>
+
+            <!-- Tema 1 -->
+            <div class="forum-thread">
+                <h3>Próximos eventos del campus</h3>
+                <p>Publicado por: Juan Pérez el 10 de enero de 2025</p>
+                <p>Este semestre tenemos una serie de eventos emocionantes. ¿Quién se apunta al evento de networking?</p>
+                <div class="replies">
+                    <p><strong>Respuesta:</strong> ¡Estoy interesado! Creo que es una excelente oportunidad para conocer a otros estudiantes y profesores.</p>
+                </div>
+            </div>
+
+            <!-- Tema 2 -->
+            <div class="forum-thread">
+                <h3>Consejos para aprovechar el semestre</h3>
+                <p>Publicado por: María García el 15 de diciembre de 2024</p>
+                <p>¿Algún consejo para organizarse mejor durante el semestre y sacar el máximo provecho de las clases?</p>
+                <div class="replies">
+                    <p><strong>Respuesta:</strong> Te recomiendo usar una aplicación de planificación para organizar tus tareas y estudiar regularmente.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Foros por Aula/Curso -->
+        <div class="forum-section">
+            <h3>Foros por Aula/Curso</h3>
+
+            <!-- Enlaces a foros por cursos -->
+            <p><a href="foro-master-liderazgo.html" class="forum-link">Foro Master en Liderazgo Empresarial Cristiano</a></p>
+            <p><a href="foro-diploma-finanzas.html" class="forum-link">Foro Diploma en Finanzas y Emprendimiento Cristiano</a></p>
+            <p><a href="foro-talleres-cortos.html" class="forum-link">Foro Talleres Cortos y Cursos</a></p>
+            <p><a href="foro-seminarios-especializados.html" class="forum-link">Foro Seminarios Especializados</a></p>
+            <p><a href="foro-paquetes-corporativos.html" class="forum-link">Foro Paquetes Corporativos</a></p>
+
+        </div>
+
+        <!-- Formulario para publicar un nuevo tema en el foro general -->
+        <div class="post-form">
+            <h3>Publicar un nuevo tema</h3>
+            <form action="guardar-tema.php" method="POST">
+                <label for="titulo">Título del tema</label>
+                <input type="text" id="titulo" name="titulo" required>
+
+                <label for="contenido">Contenido del tema</label>
+                <textarea id="contenido" name="contenido" required></textarea>
+
+                <button type="submit">Publicar</button>
+            </form>
+        </div>
+
+        <!-- Formulario para responder a un tema -->
+        <div class="reply-form">
+            <h4>Responder a este tema</h4>
+            <form action="guardar-respuesta.php" method="POST">
+                <textarea name="respuesta" placeholder="Escribe tu respuesta aquí..." required></textarea><br>
+                <button type="submit">Responder</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

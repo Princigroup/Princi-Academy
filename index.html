@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Princi Academy - Evangelical Business School</title>
+    <style>
+        .logohead {
+            height: 120px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #005599, #003366);
+            color: white;
+            padding: 15px 20px;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .language-switcher {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .language-switcher button {
+            background: none;
+            color: white;
+            border: 1px solid white;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .language-switcher button:hover {
+            background: white;
+            color: #003366;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5);
+        }
+
+        .hero-text {
+            position: absolute;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .cta-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .cta-button {
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            background-color: #003366;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #005599;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logohead" src="EVANGELICAL BUSINESS SCHOOL.svg" alt="Princi Academy Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html" id="nav-home">Inicio</a></li>
+                <li><a href="quienes-somos.html" id="nav-about">Quiénes somos</a></li>
+                <li><a href="courses.html" id="nav-courses">Programas académicos</a></li>
+                <li><a href="admisiones.html" id="nav-admissions">Admisiones</a></li>
+                <li><a href="vida-campus.html" id="nav-campus">Vida en el campus</a></li>
+                <li><a href="contact.html" id="nav-contact">Contacto</a></li>
+                <li><a href="campus/login.html" id="nav-virtual">Aula Virtual</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher">
+            <button onclick="switchLanguage('es')">Español</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <img src="IMG/home.jpg" alt="Students in a professional environment">
+        <div class="hero-text">
+            <h1 id="hero-title">Formamos líderes con valores para transformar el mundo</h1>
+            <p id="hero-subtitle">Excelencia académica con propósito cristiano</p>
+            <div class="cta-buttons">
+                <a href="courses.html" class="cta-button" id="cta-discover">Descubre nuestros programas</a>
+                <a href="contact.html" class="cta-button" id="cta-info">Solicita información</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p id="footer-text">&copy; 2024 Princi Academy - Evangelical Business School. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            es: {
+                "nav-home": "Inicio",
+                "nav-about": "Quiénes somos",
+                "nav-courses": "Programas académicos",
+                "nav-admissions": "Admisiones",
+                "nav-campus": "Vida en el campus",
+                "nav-contact": "Contacto",
+                "nav-virtual": "Aula Virtual",
+                "hero-title": "Formamos líderes con valores para transformar el mundo",
+                "hero-subtitle": "Excelencia académica con propósito cristiano",
+                "cta-discover": "Descubre nuestros programas",
+                "cta-info": "Solicita información",
+                "footer-text": "&copy; 2024 Princi Academy - Evangelical Business School. Todos los derechos reservados."
+            },
+            en: {
+                "nav-home": "Home",
+                "nav-about": "About Us",
+                "nav-courses": "Academic Programs",
+                "nav-admissions": "Admissions",
+                "nav-campus": "Campus Life",
+                "nav-contact": "Contact",
+                "nav-virtual": "Virtual Classroom",
+                "hero-title": "Shaping leaders with values to transform the world",
+                "hero-subtitle": "Academic excellence with a Christian purpose",
+                "cta-discover": "Discover our programs",
+                "cta-info": "Request information",
+                "footer-text": "&copy; 2024 Princi Academy - Evangelical Business School. All Rights Reserved."
+            }
+        };
+
+        function switchLanguage(lang) {
+            const elements = document.querySelectorAll("[id]");
+            elements.forEach(el => {
+                const key = el.id;
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+        }
+    </script>
+</body>
+</html>

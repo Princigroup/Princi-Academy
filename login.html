@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Campus Virtual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .login-container h1 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1 id="login-title">Iniciar Sesión</h1>
+        <form action="validate-login.php" method="POST">
+            <input type="text" name="username" id="username-placeholder" placeholder="Nombre de usuario" required>
+            <input type="password" name="password" id="password-placeholder" placeholder="Contraseña" required>
+            <button type="submit" id="submit-button">Ingresar</button>
+        </form>
+    </div>
+
+    <script>
+        // Función para obtener el idioma del navegador y cambiar el contenido
+        function detectLanguage() {
+            const userLanguage = navigator.language || navigator.userLanguage;  // Detecta el idioma del navegador
+            const language = userLanguage.includes('es') ? 'es' : 'en';  // Si el idioma incluye 'es', usar español, sino inglés
+
+            // Cambiar contenido dependiendo del idioma detectado
+            if (language === 'es') {
+                document.documentElement.lang = 'es';
+                document.getElementById('login-title').textContent = 'Iniciar Sesión';
+                document.getElementById('username-placeholder').placeholder = 'Nombre de usuario';
+                document.getElementById('password-placeholder').placeholder = 'Contraseña';
+                document.getElementById('submit-button').textContent = 'Ingresar';
+            } else if (language === 'en') {
+                document.documentElement.lang = 'en';
+                document.getElementById('login-title').textContent = 'Login';
+                document.getElementById('username-placeholder').placeholder = 'Username';
+                document.getElementById('password-placeholder').placeholder = 'Password';
+                document.getElementById('submit-button').textContent = 'Login';
+            }
+        }
+
+        // Ejecutar la función para detectar el idioma cuando se cargue la página
+        detectLanguage();
+    </script>
+</body>
+</html>

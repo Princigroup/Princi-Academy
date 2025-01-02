@@ -1,0 +1,49 @@
+<?php
+// Conexión a la base de datos
+$host = "localhost";
+$usuario = "root";
+$clave = "";
+$base_de_datos = "mi_base_de_datos";
+
+// Crear la conexión
+$conn = new mysqli($host, $usuario, $clave, $base_de_datos);
+
+// Verificar si hay errores de conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Variables que provienen del formulario (simuladas para este ejemplo)
+$nombre = "Juan Pérez";
+$edad = 25;
+$email = "juan@example.com";
+
+// Preparar la consulta SQL
+$query = "INSERT INTO usuarios (nombre, edad, email) VALUES (?, ?, ?)";
+
+// Usar una consulta preparada
+$stmt = $conn->prepare($query);
+
+// Verificar si la preparación fue exitosa
+if ($stmt === false) {
+    die('Error al preparar la consulta: ' . $conn->error);
+}
+
+// Vincular los parámetros a la consulta preparada
+$stmt->bind_param("sis", $nombre, $edad, $email);
+
+// El primer parámetro "s" significa que $nombre es un string.
+// El segundo parámetro "i" significa que $edad es un entero (integer).
+// El tercer parámetro "s" significa que $email es un string.
+
+// Ejecutar la consulta
+if ($stmt->execute()) {
+    echo "Datos insertados correctamente";
+} else {
+    echo "Error al insertar los datos: " . $stmt->error;
+}
+
+// Cerrar la declaración y la conexión
+$stmt->close();
+$conn->close();
+?>

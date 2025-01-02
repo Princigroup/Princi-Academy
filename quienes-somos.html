@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes somos - Princi Academy</title>
+    <style>
+        .logohead {
+            height: 120px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #005599, #003366);
+            color: white;
+            padding: 15px 20px;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #003366;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .language-selector select {
+            background: white;
+            color: #333;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .section-content {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .text-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .image-content img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        .info-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .info-box {
+            flex: 1;
+            min-width: 280px;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .mission {
+            background-color: #005599;
+        }
+
+        .vision {
+            background-color: #0077b6;
+        }
+
+        .values {
+            background-color: #0099cc;
+        }
+
+        .team-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .team-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .team-card {
+            width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .team-card h3 {
+            margin: 15px 0 10px;
+            color: #005599;
+        }
+
+        .team-card p {
+            color: #555;
+            margin: 10px 0 0;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logohead" src="EVANGELICAL BUSINESS SCHOOL.svg" alt="Princi Academy Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                <li><a href="courses.html">Programas académicos</a></li>
+                <li><a href="admisiones.html">Admisiones</a></li>
+                <li><a href="vida-campus.html">Vida en el campus</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher" style="margin-left:auto;">
+            <button onclick="changeLanguage('es')">Español</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </div>
+    </header>
+    
+    <section id="historia" class="section-content">
+        <div class="text-content">
+            <h2>Quiénes Somos</h2>
+            <p>La Escuela Evangélica de Negocios es una iniciativa que nace a finales de 2023 bajo el grupo empresarial Princi & Co Group desarrollandolo durante el 2024, con la visión de abrir sus puertas oficialmente en 2025. Fundada por Tamara Pinillos Blanco (Princi), la institución tiene una profunda identidad cristiana; por ello, sus valores y principios se basan en la convicción de que su creación y dirección son parte de la voluntad de Dios.</p>
+            <p>Nuestro propósito es ofrecer una formación empresarial de alta calidad, que combine excelencia académica con valores cristianos sólidos. Nuestra visión es la de preparar a nuestros futuros estudiantes no solo como profesionales competentes, sino también como grandes líderes capaces de tomar decisiones basadas en las enseñanzas de los Evangelios. Queremos inspirar en las empresas el reflejo del amor, la justicia y los valores de Dios en cada aspecto de la vida profesional.</p>
+            <p>La visión de Princi Academy se encuentra en constante desarrollo. Actualmente, estamos en proceso de establecer alianzas internacionales con universidades de renombre para garantizar que nuestras titulaciones sean homologadas y reconocidas a nivel global. Este esfuerzo nos permitirá ofrecer una educación empresarial con un enfoque internacional, dirigida a impactar positivamente el mercado laboral y la sociedad en general.</p>
+            <p>Nos enfocamos en construir una institución sólida que se caracterice por su compromiso con la integridad, la excelencia y el desarrollo de sus estudiantes. Cada paso que damos está marcado por una fe inquebrantable en la dirección divina y por el deseo de servir como un modelo empresarial guiado por principios cristianos.</p>
+        </div>
+        <div class="image-content">
+            <img src="IMG/DALL·E 2024-12-30 19.47.09 - An inspiring image representing a blend of Christian and academic themes. The scene features a serene cross on a hill with a bright sky in the backgro.webp" alt="Imagen cristiana o académica">
+        </div>
+    </section>
+
+    <section class="info-boxes" id="info-boxes">
+        <div class="info-box mission">
+            <h2>Misión</h2>
+            <p>Formar líderes integrales que impacten positivamente el mundo empresarial y la sociedad, guiados por principios cristianos.</p>
+        </div>
+        <div class="info-box vision">
+            <h2>Visión</h2>
+            <p>Ser reconocidos como líderes en educación empresarial cristiana, destacando en excelencia académica, compromiso social y valores éticos.</p>
+        </div>
+        <div class="info-box values">
+            <h2>Valores</h2>
+            <p>Fe, excelencia, ética, compromiso social e innovación.</p>
+        </div>
+    </section>
+
+    <section class="team-section" id="team-section">
+        <h2>Nuestro Comité Directivo</h2>
+        <div class="team-cards">
+            <div class="team-card">
+                <img src="IMG/team-member1.jpg" alt="Miembro del Comité">
+                <h3>Nombre 1</h3>
+                <p>Rol</p>
+            </div>
+            <div class="team-card">
+                <img src="IMG/team-member2.jpg" alt="Miembro del Comité">
+                <h3>Nombre 2</h3>
+                <p>Rol</p>
+            </div>
+            <div class="team-card">
+                <img src="IMG/team-member3.jpg" alt="Miembro del Comité">
+                <h3>Nombre 3</h3>
+                <p>Rol</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Princi Academy - Evangelical Business School. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function changeLanguage(language) {
+            if (language === 'es') {
+                // Cambiar el contenido a español
+                document.querySelectorAll('nav ul li a')[0].innerText = 'Inicio';
+                document.querySelectorAll('nav ul li a')[1].innerText = 'Quiénes somos';
+                document.querySelectorAll('nav ul li a')[2].innerText = 'Programas académicos';
+                document.querySelectorAll('nav ul li a')[3].innerText = 'Admisiones';
+                document.querySelectorAll('nav ul li a')[4].innerText = 'Vida en el campus';
+                document.querySelectorAll('nav ul li a')[5].innerText = 'Contacto';
+                
+                document.querySelector('#historia .text-content h2').innerText = 'Quiénes Somos';
+                document.querySelector('#historia .text-content p:nth-child(2)').innerText = 
+                    'La Escuela Evangélica de Negocios es una iniciativa que nace a finales de 2023 bajo el grupo empresarial Princi & Co Group, desarrollándola durante 2024, con la visión de abrir sus puertas oficialmente en 2025. Fundada por Tamara Pinillos Blanco (Princi), la institución tiene una profunda identidad cristiana; por ello, sus valores y principios se basan en la convicción de que su creación y dirección son parte de la voluntad de Dios.';
+                document.querySelector('#historia .text-content p:nth-child(3)').innerText = 
+                    'Nuestro propósito es ofrecer una formación empresarial de alta calidad, que combine excelencia académica con valores cristianos sólidos. Nuestra visión es la de preparar a nuestros futuros estudiantes no solo como profesionales competentes, sino también como grandes líderes capaces de tomar decisiones basadas en las enseñanzas de los Evangelios. Queremos inspirar en las empresas el reflejo del amor, la justicia y los valores de Dios en cada aspecto de la vida profesional.';
+                document.querySelector('#historia .text-content p:nth-child(4)').innerText = 
+                    'La visión de Princi Academy se encuentra en constante desarrollo. Actualmente, estamos en proceso de establecer alianzas internacionales con universidades de renombre para garantizar que nuestras titulaciones sean homologadas y reconocidas a nivel global. Este esfuerzo nos permitirá ofrecer una educación empresarial con un enfoque internacional, dirigida a impactar positivamente el mercado laboral y la sociedad en general.';
+                document.querySelector('#historia .text-content p:nth-child(5)').innerText = 
+                    'Nos enfocamos en construir una institución sólida que se caracterice por su compromiso con la integridad, la excelencia y el desarrollo de sus estudiantes. Cada paso que damos está marcado por una fe inquebrantable en la dirección divina y por el deseo de servir como un modelo empresarial guiado por principios cristianos.';
+
+                // Misiones, visión y valores
+                document.querySelector('.info-box.mission h2').innerText = 'Misión';
+                document.querySelector('.info-box.mission p').innerText = 
+                    'Formar líderes integrales que impacten positivamente el mundo empresarial y la sociedad, guiados por principios cristianos.';
+                document.querySelector('.info-box.vision h2').innerText = 'Visión';
+                document.querySelector('.info-box.vision p').innerText = 
+                    'Ser reconocidos como líderes en educación empresarial cristiana, destacando en excelencia académica, compromiso social y valores éticos.';
+                document.querySelector('.info-box.values h2').innerText = 'Valores';
+                document.querySelector('.info-box.values p').innerText = 
+                    'Fe, excelencia, ética, compromiso social e innovación.';
+                document.querySelector('.team-section h2').innerText = 'Nuestro Comité Directivo';
+
+                // Miembros del equipo
+                document.querySelectorAll('.team-card h3')[0].innerText = 'Nombre 1';
+                document.querySelectorAll('.team-card h3')[1].innerText = 'Nombre 2';
+                document.querySelectorAll('.team-card h3')[2].innerText = 'Nombre 3';
+                document.querySelectorAll('.team-card p')[0].innerText = 'Rol';
+                document.querySelectorAll('.team-card p')[1].innerText = 'Rol';
+                document.querySelectorAll('.team-card p')[2].innerText = 'Rol';
+
+            } else if (language === 'en') {
+                // Cambiar el contenido a inglés
+                document.querySelectorAll('nav ul li a')[0].innerText = 'Home';
+                document.querySelectorAll('nav ul li a')[1].innerText = 'About Us';
+                document.querySelectorAll('nav ul li a')[2].innerText = 'Academic Programs';
+                document.querySelectorAll('nav ul li a')[3].innerText = 'Admissions';
+                document.querySelectorAll('nav ul li a')[4].innerText = 'Campus Life';
+                document.querySelectorAll('nav ul li a')[5].innerText = 'Contact';
+
+                document.querySelector('#historia .text-content h2').innerText = 'About Us';
+                document.querySelector('#historia .text-content p:nth-child(2)').innerText = 
+                    'The Evangelical Business School is an initiative that was born at the end of 2023 under the Princi & Co Group, developed in 2024, with the vision to officially open in 2025. Founded by Tamara Pinillos Blanco (Princi), the institution has a deep Christian identity; therefore, its values and principles are based on the belief that its creation and guidance are part of God\'s will.';
+                document.querySelector('#historia .text-content p:nth-child(3)').innerText = 
+                    'Our purpose is to offer high-quality business training, combining academic excellence with solid Christian values. Our vision is to prepare our future students not only as competent professionals but also as great leaders capable of making decisions based on the teachings of the Gospels. We want to inspire companies to reflect God\'s love, justice, and values in every aspect of professional life.';
+                document.querySelector('#historia .text-content p:nth-child(4)').innerText = 
+                    'The vision of Princi Academy is constantly developing. We are currently in the process of establishing international partnerships with renowned universities to ensure that our degrees are accredited and recognized globally. This effort will allow us to offer business education with an international focus, aimed at positively impacting the labor market and society in general.';
+                document.querySelector('#historia .text-content p:nth-child(5)').innerText = 
+                    'We focus on building a solid institution characterized by its commitment to integrity, excellence, and student development. Every step we take is marked by unwavering faith in divine direction and the desire to serve as a business model guided by Christian principles.';
+
+                // Mission, Vision, Values
+                document.querySelector('.info-box.mission h2').innerText = 'Mission';
+                document.querySelector('.info-box.mission p').innerText = 
+                    'To form integral leaders who positively impact the business world and society, guided by Christian principles.';
+                document.querySelector('.info-box.vision h2').innerText = 'Vision';
+                document.querySelector('.info-box.vision p').innerText = 
+                    'To be recognized as leaders in Christian business education, excelling in academic excellence, social commitment, and ethical values.';
+                document.querySelector('.info-box.values h2').innerText = 'Values';
+                document.querySelector('.info-box.values p').innerText = 
+                    'Faith, excellence, ethics, social commitment, and innovation.';
+                document.querySelector('.team-section h2').innerText = 'Our Board of Directors';
+
+                // Team members
+                document.querySelectorAll('.team-card h3')[0].innerText = 'Name 1';
+                document.querySelectorAll('.team-card h3')[1].innerText = 'Name 2';
+                document.querySelectorAll('.team-card h3')[2].innerText = 'Name 3';
+                document.querySelectorAll('.team-card p')[0].innerText = 'Role';
+                document.querySelectorAll('.team-card p')[1].innerText = 'Role';
+                document.querySelectorAll('.team-card p')[2].innerText = 'Role';
+            }
+        }
+    </script>
+</body>
+</html>
